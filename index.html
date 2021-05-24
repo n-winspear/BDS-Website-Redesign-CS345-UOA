@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Discussion Scheme</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <img src="bds-logo-long.svg" alt="Book Discussion Scheme" class="navbar-logo">
+        <ul class="navbar-links">
+            <li class="navbar-link navbar-link-active" id="home">
+                <a href="/">Home</a>
+                <div class="navbar-link-active-identifier custom-background-color"></div>
+            </li>
+            <li class="navbar-link">
+                <a href="/unfinished.html">About Us</a>
+                <div class="navbar-link-active-identifier custom-background-color"></div>
+            </li>
+            <li class="navbar-link">
+                <a href="/unfinished.html">News</a>
+                <div class="navbar-link-active-identifier custom-background-color"></div>
+            </li>
+            <li class="navbar-link">
+                <a href="/unfinished.html">Books</a>
+                <div class="navbar-link-active-identifier custom-background-color"></div>
+            </li>
+            <li class="navbar-link">
+                <a href="/unfinished.html">Groups</a>
+                <div class="navbar-link-active-identifier custom-background-color"></div>
+            </li>
+            <li class="navbar-link">
+                <a href="/unfinished.html">Memberships</a>
+                <div class="navbar-link-active-identifier custom-background-color"></div>
+            </li>
+            <li class="navbar-link-button"><button onclick="window.location.href = '/unfinished.html';"
+                    class="custom-background-color">Login</button></li>
+        </ul>
+    </nav>
+    <div class="main-content">
+
+
+        <section class="header-section">
+            <img src="bds-logo-short-light.svg" alt="BDS" class="header-logo">
+            <h1>Book Discussion Scheme</h1>
+            <h2>Opening books. Opening minds.</h2>
+            <div class="header-call-to-action">
+                <button class="custom-background-color" id="trigger-modal">Register</button>
+                <h4>or</h4>
+                <a href="/unfinished.html">
+                    <h3>Learn more</h3>
+                </a>
+            </div>
+        </section>
+
+
+        <section>
+            <div id="registration-modal" class="modal">
+                <div class="bookclubrego">
+                    <span class="modal-close">&times;</span>
+                    <h1>Registration Form</h1>
+                    <div class="form-container">
+                        <form action="" class="registration-form">
+                            <div class="userDetails">
+                                <h2 id="section-userDetails" class="form-section-title custom-color">Account Details
+                                </h2>
+                                <input type="text" name="firstName" id="rego-first-name" class="form-input"
+                                    placeholder="First Name">
+                                <input type="text" name="lastName" id="rego-last-name" class="form-input"
+                                    placeholder="Last Name">
+                                <input type="text" name="userName" id="rego-username" class="form-input"
+                                    placeholder="Username">
+                                <input type="password" name="password" id="rego-password" class="form-input"
+                                    placeholder="Password">
+                            </div>
+                            <div class="contacts">
+                                <h2 class="form-section-title custom-color">Contact Info</h2>
+                                <input type="email" name="email" id="rego-email" class="form-input"
+                                    placeholder="Email Address">
+                                <input type="phone" name="phone" id="rego-phone" class="form-input"
+                                    placeholder="Phone Number">
+                            </div>
+                            <div class="addresses">
+                                <h2 class="form-section-title custom-color" id="section-addresses">Addresses</h2>
+                                <input type="address" name="homeAddress" id="rego-home-address" class="form-input"
+                                    placeholder="Home Address">
+                                <input type="address" name="workAddress" id="rego-work-address" class="form-input"
+                                    placeholder="Work Address">
+                            </div>
+                        </form>
+                        <button onclick="window.location.href = '/unfinished.html';"
+                            class="register-button custom-background-color" id="submit-register">Register
+                            Now</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="cards-section">
+            <div class="card">
+                <div class="card-title">Latest News</div>
+                <img src="card-image-website-redesign.png" alt="Wesbite Redesign" class="card-image-latest-news">
+                <h1>Website Redesign</h1>
+                <h2>You read it right, we are redesigning
+                    our website! The redesign is a part of us trying to make expanding…</h2>
+                <button class="custom-color" onclick="window.location.href = '/unfinished.html';">Read More</button>
+            </div>
+            <div class="card">
+                <div class="card-title">Recommended Reading</div>
+                <div class="book-details">
+                    <img src="bookcover-hatchet.jpg" alt="Hatchet Cover" class="book-details-cover">
+                    <div class="book-details-content">
+                        <div>
+                            <h3>Title:</h3>
+                            <h4>Hatchet</h4>
+                        </div>
+                        <div>
+                            <h3>Author:</h3>
+                            <h4>Gary Paulsen</h4>
+                        </div>
+                        <div>
+                            <h3>Genre:</h3>
+                            <h4>Young Adult Fiction</h4>
+                        </div>
+                    </div>
+                </div>
+                <h2>Brian is on his way to Canada to visit his estranged father when the pilot of his small prop plane
+                    suffers a heart attack…</h2>
+                <button class="custom-color" onclick="window.location.href = '/unfinished.html';">Read More</button>
+            </div>
+            <div class="card">
+                <div class="card-title">Find a Group</div>
+                <div class="interactive-map-content">
+                    <h1>Interactive Map</h1>
+                    <h2>We’ve built an interactive map to
+                        help you find your nearest group.</h2>
+                    <h3>Select your nearest location</h3>
+                    <select id="nearest-location" name="nearest-location" class="location-selector">
+                        <option value="North Shore">North Shore</option>
+                        <option value="Auckland CBD">Auckland CBD</option>
+                        <option value="Mt Eden">Mt Eden</option>
+                        <option value="Mount Wellington">Mount Wellington</option>
+                        <option value="Botany">Botany</option>
+                        <option value="Manukau">Manukau</option>
+                        <option value="Papakura">Papakura</option>
+                        <option value="Drury">Drury</option>
+                    </select>
+                    <h5>or</h5>
+                    <input type="text" placeholder="Enter your location...">
+                </div>
+                <button class="custom-color" onclick="window.location.href = '/unfinished.html';">Find Group</button>
+            </div>
+            <div class="card">
+                <div class="card-title">Group Book Review</div>
+                <div class="book-details">
+                    <img src="bookcover-a-sitting-in-st-james.jpg" alt="A Sitting in St. James Cover"
+                        class="book-details-cover">
+                    <div class="book-details-content">
+                        <div>
+                            <h3>Title:</h3>
+                            <h4>A Sitting in St. James</h4>
+                        </div>
+                        <div>
+                            <h3>Author:</h3>
+                            <h4>Rita Williams-Garcia</h4>
+                        </div>
+                        <div>
+                            <h3>Genre:</h3>
+                            <h4>Young Adult Fiction</h4>
+                        </div>
+                    </div>
+                </div>
+                <h2>A Sitting in St. James is a mesmerizing, confounding and vividly rendered portrait of the thoroughly
+                    putrid institution…</h2>
+                <button class="custom-color" onclick="window.location.href = '/unfinished.html';">Read More</button>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="footer-contents">
+                <div class="contact-us column">
+                    <h1>CONTACT US</h1>
+                    <div class="contact-method">
+                        <h2>Email:</h2>
+                        <a href="mailto:bds@bds.org.nz">bds@bds.org.nz</a>
+                    </div>
+                    <div class="contact-method">
+                        <h2>Phone</h2>
+                        <a href="tel:033656210">03 365 6210</a>
+                    </div>
+                    <div class="contact-method">
+                        <h2>Address</h2>
+                        <a href="https://www.google.com/maps/place/425+Colombo+Street,+Sydenham,+Christchurch+8023/@-43.5442541,172.6342119,17z/data=!3m1!4b1!4m5!3m4!1s0x6d318a0fe19666bb:0xbbba997f959de7fd!8m2!3d-43.5442541!4d172.6364006"
+                            target="_blank">425
+                            Colombo Street, Sydenham,
+                            Christchurch 8023</ahref>
+                    </div>
+                </div>
+                <div class="legal column">
+                    <h1>LEGAL</h1>
+                    <ul class="legal-options">
+                        <li><a href="/unfinished.html">Terms and Conditions</a></li>
+                        <li><a href="/unfinished.html">Site Map</a></li>
+                        <li><a href="/unfinished.html">Privacy Policy</a></li>
+                        <li><a href="https://xd.adobe.com/view/fc66f7cc-3f10-4f87-913f-fe5d982263d9-a935/?fullscreen"
+                                target="_blank">My
+                                AdobeXD Page Design</a></li>
+                    </ul>
+                </div>
+                <div class="social column">
+                    <h1>SOCIAL</h1>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/welovewebdesign/" target="_blank">
+                            <img src="icon-instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://www.facebook.com/groups/mobiledesignindia" target="_blank">
+                            <img src="icon-facebook.png" alt="Facebook">
+                        </a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    &#169; 2021 Book Discussion Scheme | All Rights Reserved
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

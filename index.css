@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/* SITEWIDE DEFINITIONS */
+
+:root {
+    --primary-dark-color: #463f3a;
+    --primary-light-color: #fcf7f8;
+    --secondary-color: #cda434;
+    --tertiary-color: #63ccca;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--primary-dark-color);
+
+    --navbar-link-padding: 22px;
+}
+
+.custom-color {
+    color: var(--secondary-color);
+}
+
+.custom-background-color {
+    background-color: var(--secondary-color);
+}
+
+::selection {
+    color: var(--secondary-color);
+    background-color: var(--secondary-color);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* unvisited link */
+a:link {
+    color: var(--primary-dark-color);
+    text-decoration: none
+}
+
+/* visited link */
+a:visited {
+    color: var(--primary-dark-color);
+    text-decoration: none
+}
+
+/* mouse over link */
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: none
+}
+
+/* selected link */
+a:active {
+    color: var(--primary-dark-color);
+    text-decoration: none
+}
+
+/* CUSTOM DEFINITIONS */
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    height: 64px;
+    background-color: var(--primary-light-color);
+}
+
+.navbar-logo {
+    height: 44px;
+    width: auto;
+    margin: auto 0 auto 24px;
+}
+
+.navbar-links {
+    list-style-type: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar-link {
+    float: left;
+    display: block;
+    height: 100%;
+    padding: var(--navbar-link-padding) 16px 0 16px;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.navbar-link-button {
+    float: left;
+    display: block;
+    height: 100%;
+    margin: 16px 24px 0 16px;
+}
+
+.navbar-link-button button {
+    width: 60px;
+    height: 32px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary-light-color)
+}
+
+.navbar-link-button button:hover {
+    border: 1px solid var(--secondary-color);
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.navbar-link-active {
+    float: left;
+    display: block;
+    height: 100%;
+    padding: var(--navbar-link-padding) 16px 0 16px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar-link-active-identifier {
+    display: none;
+    height: 2px;
+    width: 100%;
+    border-radius: 50px;
+    margin: 4px 0 0 0;
+}
+
+/* HEADER SECTION */
+
+.header-section {
+    background-image: url("bds-banner.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 0 0 0 100px;
+}
+
+.header-logo {
+    height: 132px;
+    width: auto;
+    margin: 40px 0 0 0;
+}
+
+.header-section h1 {
+    margin: 28px 0 0 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 50px;
+    color: var(--primary-light-color);
+}
+
+.header-section h2 {
+    margin: 8px 0 0 0;
+    padding: 0;
+    font-weight: 300;
+    font-size: 24px;
+    color: var(--primary-light-color);
+}
+
+.header-call-to-action {
+    margin: 48px 0 0 0;
+    padding: 0 0 48px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-call-to-action button {
+    width: 100px;
+    height: 48px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary-light-color)
+}
+
+.header-call-to-action button:hover {
+    border: 1px solid var(--secondary-color);
+    opacity: 90%;
+    cursor: pointer;
+}
+
+.header-call-to-action h4 {
+    margin: 0px 0px 0px 16px;
+    padding: 0;
+    color: var(--primary-light-color);
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.header-call-to-action h3 {
+    margin: 0px 0px 0px 16px;
+    padding: 0;
+    color: var(--tertiary-color);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.header-call-to-action h3:hover {
+    cursor: pointer;
+    opacity: 80%;
+}
+
+/* CARDS SECTION */
+
+/* Card Components */
+
+.cards-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 32px 32px;
+    height: 315px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #FFFFFF;
+    width: 220px;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 5px 6px #00000026;
+    overflow: hidden;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: var(--tertiary-color);
+    border-radius: 8px 8px 0px 0px;
+    color: var(--primary-light-color)
+}
+
+.card button {
+    align-self: center;
+    justify-self: flex-end;
+    width: 100px;
+    height: 28px;
+    margin: auto 0px 16px 0px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #FFFFFF;
+}
+
+.card button:hover {
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* Fonts */
+
+.card h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0px 0px 8px 0px;
+    padding: 0px 16px 0px 16px;
+}
+
+.card h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 0px 16px 0px 16px;
+}
+
+.card h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.card h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.card h5 {
+    margin: 8px 0px;
+    padding: 0;
+    font-size: 10px;
+    font-weight: 100;
+}
+
+/* Latest News */
+
+.card-image-latest-news {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    margin: 0px 0px 16px 0px;
+}
+
+/* Book Details and Group Book Review */
+
+.book-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 16px;
+}
+
+.book-details-cover {
+    width: 35%;
+    border-radius: 4px;
+}
+
+.book-details-content {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0px 16px 0px 16px;
+}
+
+/* Interactive Map */
+
+.interactive-map-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 16px;
+}
+
+.interactive-map-content h1 {
+    align-self: flex-start;
+    padding: 0px;
+}
+
+.interactive-map-content h2 {
+    align-self: flex-start;
+    padding: 0px;
+    margin-bottom: 16px;
+}
+
+.interactive-map-content h3 {
+    align-self: flex-start;
+    padding: 0px;
+    font-size: 8px;
+    margin: 0px 0px 4px 8px;
+    color: #463f3aA0;
+}
+
+
+.card select {
+    width: 178px;
+    height: auto;
+    color: var(--primary-dark-color);
+    background-color: #463f3a10;
+    border: 1px solid #463f3a46;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.card select:hover {
+    cursor: pointer;
+}
+
+.card input[type="text"] {
+    width: 160px;
+    height: auto;
+    color: var(--primary-dark-color);
+    background-color: #463f3a10;
+    border: 1px solid #463f3a46;
+    border-radius: 4px;
+    padding: 9px 8px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+
+
+/* FOOTER */
+
+/* Contact Us */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--primary-dark-color);
+    color: var(--primary-light-color)
+}
+
+.footer-contents {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 9fr 1fr;
+    grid-template-areas: "contact-us legal social""copyright copyright copyright";
+    margin: 48px 0px 16px 0px;
+}
+
+.column {
+    width: 200px;
+    margin: 0px 64px;
+}
+
+.contact-us {
+    grid-area: contact-us;
+}
+
+.contact-method {
+    margin: 16px 0px;
+}
+
+.legal {
+    grid-area: legal;
+}
+
+.legal-options {
+    list-style-type: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+.legal-options li {
+    margin: 16px 0px;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+.social {
+    grid-area: social;
+}
+
+.social-icons {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 12px 12px 0px 0px;
+}
+
+.social-icons img:hover {
+    cursor: pointer;
+    opacity: 80%;
+}
+
+.copyright {
+    grid-area: copyright;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 100;
+    margin: 0px 152px 0px 0px;
+}
+
+/* Fonts */
+
+.footer-contents h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.footer-contents h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.footer-contents a {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--primary-light-color)
+}
+
+.footer-contents a:hover {
+    cursor: pointer;
+    color: var(--secondary-color)
+}
+
+/* THE MODAL BOX */
+
+/* Modal Functionality */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bookclubrego {
+    background-color: var(--primary-light-color);
+    margin: 5% auto;
+    padding: 32px;
+    border: 1px solid #888;
+    width: 580px;
+    border-radius: 16px;
+}
+
+.bookclubrego h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 40px;
+    margin: 16px 0px 32px 0px;
+    padding: 0;
+    color: var(--primary-dark-color);
+}
+
+.modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Modal Form Content */
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.registration-form {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.8fr;
+    grid-template-areas: "userDetails contacts""addresses addresses";
+    width: 532px;
+}
+
+.userDetails {
+    grid-area: userDetails;
+    justify-self: flex-end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr 1fr;
+    grid-template-areas: "section-userDetails section-userDetails""first-name last-name""username username""password password";
+    width: 250px;
+    height: auto;
+    margin: 0px 16px 0px 0px;
+}
+
+.contacts {
+    grid-area: contacts;
+    display: flex;
+    flex-direction: column;
+    width: 225px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0px 0px 0px 16px;
+}
+
+.addresses {
+    grid-area: addresses;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.form-input {
+    height: 1.5em;
+    color: var(--primary-dark-color);
+    background-color: #463f3a05;
+    border: 1px solid #463f3a46;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 10px 10px 10px 12px;
+    font-weight: 300;
+}
+
+.form-input::placeholder {
+    color: #463f3a6A;
+}
+
+#rego-first-name {
+    grid-area: first-name;
+    justify-self: flex-start;
+    width: 97px;
+}
+
+#rego-last-name {
+    grid-area: last-name;
+    justify-self: flex-end;
+    width: 97px;
+}
+
+#rego-username {
+    grid-area: username;
+    margin: 0px 0px 12px 0px;
+}
+
+#rego-password {
+    grid-area: password;
+    margin: 0px 0px 12px 0px;
+}
+
+#rego-email {
+    width: 228px;
+    margin: 0px 0px 12px 0px;
+}
+
+#rego-phone {
+    width: 228px;
+}
+
+#rego-home-address {
+    margin: 12px 0px 0px 0px;
+    width: 510px;
+}
+
+#rego-work-address {
+    margin: 16px 0px 0px 0px;
+    width: 510px;
+}
+
+#section-userDetails {
+    grid-area: section-userDetails;
+}
+
+#section-addresses {
+    margin: 16px 0px 0px 0px;
+}
+
+.form-section-title {
+    margin: 0px 0px 12px 0px;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 300;
+    justify-self: flex-start;
+}
+
+.register-button {
+    width: 155px;
+    height: 40px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-light-color);
+    margin: 24px 0px 0px 0px;
+}
+
+.register-button:hover {
+    border: 1px solid var(--secondary-color);
+    opacity: 80%;
+    cursor: pointer;
+}
